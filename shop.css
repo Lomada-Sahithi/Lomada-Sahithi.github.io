@@ -486,7 +486,7 @@ grid-template-columns:1fr 1fr 1fr 1fr 1fr;
   .form-container {
     padding: 10px;
     max-width: 100%;
-    width: 100vw; /* Full screen width */
+    width: 100%; /* Full screen width */
   }
 
   .form-section {
