@@ -1042,12 +1042,23 @@ function updateCart() {
     cart.forEach(item => {
         let li = document.createElement('li');
         li.innerHTML = `
-            <div style="display: flex; align-items: center; gap: 10px;">
-                <img src="${item.image}">
-                <span>${item.name} x ${item.quantity} - Rs.${(item.price * item.quantity).toFixed(2)}</span>
-                <button onclick="removeFromCart('${item.name}')">Remove</button>
-            </div>
-        `;
+  <div style="display: flex; gap: 10px;">
+    <div style="display: flex; flex-direction: column; align-items: center;">
+      <img src="${item.image}" alt="${item.name}" style="width: 80px; height: 80px; object-fit: cover;">
+      <button 
+        onclick="removeFromCart('${item.name}')" 
+        style="margin-top: 8px; padding: 4px 8px; font-size: 14px; cursor: pointer;">
+        Remove
+      </button>
+    </div>
+    <div>
+      <strong>${item.name}</strong><br>
+      Qty: ${item.quantity} <br>
+      Rs.${(item.price * item.quantity).toFixed(2)}
+    </div>
+  </div>
+`;
+
         cartList.appendChild(li);
         total += item.price * item.quantity;
     });
