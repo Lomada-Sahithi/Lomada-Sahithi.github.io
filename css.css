@@ -319,6 +319,22 @@ footer .footer_main .tag .social_link i{
   .product .product-slider .box {
     width: 100%;
   }
+      .menu {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 10px 0;
+}
+  .menu-toggle {
+    display: block;
+    font-size: 28px;
+    margin: 10px 0;
+  }
+  .menu.active {
+    display: flex;
+}
   }
   
   @media (max-width: 480px) {
